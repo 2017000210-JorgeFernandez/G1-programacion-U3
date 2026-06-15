@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+
+        int[] edadPersona = new int[7];
+        int cantidadPersonasMayores = 0;
+
+
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.WriteLine("Ingrese la edad" + i + ":");
+            edadPersona[i] = Convert.ToInt32(Console.ReadLine());
+            if (edadPersona[i] == 18)
+                cantidadPersonasMayores++;
+        }
+    
+        Console.Clear();
+        Console.WriteLine("Las edades ingresadas son:");
+        for (int i = 0;i < edadPersona.Length;i++)
+        {
+            Console.WriteLine(edadPersona[i] + "-");
+        }
+        Console.WriteLine("La cantidad de personass mayores de edad son:" + cantidadPersonasMayores);
+    }
+}
